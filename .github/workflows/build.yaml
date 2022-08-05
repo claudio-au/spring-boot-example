@@ -24,3 +24,5 @@ jobs:
         host: ${{ secrets.SONARQUBE_HOST }}
         login: ${{ secrets.SONARQUBE_TOKEN }}
         projectKey: "spring-boot-example"
+        sources: "src"
+        binaries: "build"
