@@ -13,6 +13,11 @@ jobs:
     name: SonarQube Trigger
     runs-on: ubuntu-latest
     steps:
+    - shell: bash
+      env:
+        HOST: ${{ secrets.SONARQUBE_HOST }}
+      run: |
+        echo "$HOST"
     - name: Checking out
       uses: actions/checkout@master
       with:
